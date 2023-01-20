@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "285593273098",
+    "firebase_url": "https://hale-cocoa-328702-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "hale-cocoa-328702",
+    "storage_bucket": "hale-cocoa-328702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285593273098:android:59cd1b4eedad859db9b0f3",
+        "android_client_info": {
+          "package_name": "es.riberadeltajo.sharemybike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285593273098-ev21uitn7jkm1gf7drmh98d9s9t4mkku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.riberadeltajo.sharemybike",
+            "certificate_hash": "53bb08fad9894387ac96720f39bbcd355344df9f"
+          }
+        },
+        {
+          "client_id": "285593273098-noe3kcn6j0q6q4bom0treuh823sbegbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbjnS7ftkkt2ZkpsrQ04FVpO5V-iHGqrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285593273098-31in89li5pgg61vuq0f4obdtdk72p5ru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
