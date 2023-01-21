@@ -21,7 +21,7 @@ public class FirebaseStorageHelper {
     }
 
     public void getImage(final ImageView imageView, String image){
-        StorageReference gsReference = storage.getReferenceFromUrl(image);
+        StorageReference gsReference = storage.getReferenceFromUrl("gs://hale-cocoa-328702.appspot.com/bici.jpg");
 
         gsReference.getBytes(Long.MAX_VALUE).addOnSuccessListener(bytes -> {
             Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);

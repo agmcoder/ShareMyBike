@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
     private Button googleButton;
-    private static final int RC_SIGN_IN = 9001;
+    private Button googleMapsButton;
+
+    //private static final int RC_SIGN_IN = 9001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializar botón de inicio de sesión con Google
         googleButton = findViewById(R.id.googleButton);
+        googleMapsButton = findViewById(R.id.googleMapsButton);
 
         // Configurar opciones de inicio de sesión de Google
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -45,11 +48,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Establecer el listener del botón de inicio de sesión con Google
         googleButton.setOnClickListener(v -> lanzarActividad());
+        googleMapsButton.setOnClickListener(v -> lanzarFragmentdMaps());
     }
 
 
     private void lanzarActividad() {
         Intent intent = new Intent(MainActivity.this, BikeListActivity.class);
+        startActivity(intent);
+    }
+
+    private void lanzarFragmentdMaps() {
+        Intent intent = new Intent(MainActivity.this, BikesMap.class);
         startActivity(intent);
     }
 

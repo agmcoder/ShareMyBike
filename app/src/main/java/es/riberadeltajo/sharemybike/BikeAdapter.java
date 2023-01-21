@@ -16,6 +16,7 @@ import java.util.List;
 
 import es.riberadeltajo.sharemybike.model.Bike;
 import es.riberadeltajo.sharemybike.repository.FirebaseDataHelperFire;
+import es.riberadeltajo.sharemybike.repository.FirebaseDataHelperReal;
 import es.riberadeltajo.sharemybike.repository.FirebaseStorageHelper;
 
 public class BikeAdapter extends BaseAdapter {
@@ -29,7 +30,9 @@ public class BikeAdapter extends BaseAdapter {
         this.context = context;
         BikeAdapter.bikeList = new ArrayList<>();
         FirebaseDataHelperFire firebaseDataHelperFire = new FirebaseDataHelperFire();
-        firebaseDataHelperFire.getAllBikes();
+        FirebaseDataHelperReal firebaseDataHelperReal = new FirebaseDataHelperReal();
+        firebaseDataHelperReal.getAllBikes();
+        ///firebaseDataHelperFire.getAllBikes();
         this.firebaseStorageHelper =   new FirebaseStorageHelper(context);
     }
 
@@ -61,8 +64,6 @@ public class BikeAdapter extends BaseAdapter {
         
         //set image of imageView
         firebaseStorageHelper.getImage(imageView, bike.getImage());
-
-
 
         return view;
     }
